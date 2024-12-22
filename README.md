@@ -2,7 +2,7 @@
 
 ## Usage
 
-```Zsh
+```zsh
 $ brew tap byrdocs/homebrew-byrdocs-cli
 $ brew install byrdocs-cli
 ```

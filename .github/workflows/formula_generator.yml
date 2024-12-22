@@ -1,0 +1,42 @@
+name: Generate formula
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [generate]
+
+jobs:
+  generate:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Clone formula genetator
+        run: git clone https://github.com/byrdocs/Homebrew-formula-generator.git
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          pip install homebrew-pypi-poet byrdocs-cli
+
+      - name: Get byrdocs-cli version
+        id: get_version
+        run: echo "version=$(pip list --format freeze | grep byrdocs_cli | cut -d'=' -f3)" >> "$GITHUB_ENV"
+
+      - name: Generate formula
+        run: python -m poet -f byrdocs-cli > byrdocs-cli.rb
+
+      - name: Setup GIT user
+        uses: fregante/setup-git-user@v1
+
+      - name: Update formula
+        run: |
+          git add byrdocs-cli.rb
+          git commit -m "Update byrdocs-cli formula to version ${{ steps.get_version.outputs.version }}"
+          git tag -a "v${{ steps.get_version.outputs.version }}"
+          git push origin --tags

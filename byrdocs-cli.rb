@@ -7,7 +7,7 @@ class ByrdocsCli < Formula
   sha256 "7413f94f900db6a37ecd400376472c3622dad07fcbd2c2585446685dafa877d9"
   license "MIT"
 
-  depends_on "python3"
+  depends_on "python@3.10"
 
   resource "argcomplete" do
     url "https://files.pythonhosted.org/packages/5f/39/27605e133e7f4bb0c8e48c9a6b87101515e3446003e0442761f6a02ac35e/argcomplete-3.5.1.tar.gz"
@@ -110,7 +110,7 @@ class ByrdocsCli < Formula
   end
 
   def install
-    virtualenv_create(libexec, "python3")
+    virtualenv_create(libexec, "python3.10")
     virtualenv_install_with_resources
   end
 
