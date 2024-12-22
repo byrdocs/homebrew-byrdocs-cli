@@ -5,8 +5,8 @@ class ByrdocsCli < Formula
   homepage "https://github.com/byrdocs/byrdocs-cli"
   license "MIT"
 
-  url "https://files.pythonhosted.org/packages/66/37/429a8f524b9e23ed21cbef32fe7d6f20e4a24fdec22b4b2df8de473d2a70/byrdocs_cli-0.5.3.tar.gz"
-  sha256 "7413f94f900db6a37ecd400376472c3622dad07fcbd2c2585446685dafa877d9"
+  url "https://files.pythonhosted.org/packages/ea/4e/1a419d1b8c34018e95e0d204c219a5aa290f08c32750b5e0dae7dc83efaa/byrdocs_cli-0.5.4.tar.gz"
+  sha256 "a0b9c8f5f88603aef1a25e89c0f390593b68a0cb001453fc038710e25d6e8e95"
 
   depends_on "python@3.10"
 
@@ -101,8 +101,8 @@ class ByrdocsCli < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/ed/63/22ba4ebfe7430b76388e7cd448d5478814d3032121827c12a2cc287e2260/urllib3-2.2.3.tar.gz"
-    sha256 "e7d814a81dad81e6caf2ec9fdedb284ecc9c73076b62654547cc64ccdcae26e9"
+    url "https://files.pythonhosted.org/packages/aa/63/e53da845320b757bf29ef6a9062f5c669fe997973f966045cb019c3f4b66/urllib3-2.3.0.tar.gz"
+    sha256 "f8c5449b3cf0861679ce7e0503c7b44b5ec981bec0d1d3795a07f1ba96f0204d"
   end
 
   resource "wcwidth" do
