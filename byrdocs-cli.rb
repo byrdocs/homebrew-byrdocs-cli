@@ -1,13 +1,12 @@
 class ByrdocsCli < Formula
   include Language::Python::Virtualenv
 
-  desc "Command-line tool for uploading files to byrdocs.org"
+  desc "Shiny new formula"
   homepage "https://github.com/byrdocs/byrdocs-cli"
   url "https://files.pythonhosted.org/packages/66/37/429a8f524b9e23ed21cbef32fe7d6f20e4a24fdec22b4b2df8de473d2a70/byrdocs_cli-0.5.3.tar.gz"
   sha256 "7413f94f900db6a37ecd400376472c3622dad07fcbd2c2585446685dafa877d9"
-  license "MIT"
 
-  depends_on "python@3.10"
+  depends_on "python3"
 
   resource "argcomplete" do
     url "https://files.pythonhosted.org/packages/5f/39/27605e133e7f4bb0c8e48c9a6b87101515e3446003e0442761f6a02ac35e/argcomplete-3.5.1.tar.gz"
@@ -110,13 +109,11 @@ class ByrdocsCli < Formula
   end
 
   def install
-    virtualenv_create(libexec, "python3.10")
+    virtualenv_create(libexec, "python3")
     virtualenv_install_with_resources
   end
 
   test do
-    expect = "usage: byrdocs [-h] [--token TOKEN] [--manually] [command] [file]"
-    assert_match expect, pipe_output("#{bin}/byrdocs --help 2>&1")
+    false
   end
 end
-
