@@ -22,14 +22,14 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install Homebrew-formula-generator byrdocs-cli
+          pip install ./Homebrew-formula-generator byrdocs-cli
 
       - name: Get byrdocs-cli version
         id: get_version
         run: echo "version=$(pip list --format freeze | grep byrdocs_cli | cut -d'=' -f3)" >> "$GITHUB_OUTPUT"
 
       - name: Generate formula
-        run: python -m poet -f byrdocs-cli > byrdocs-cli.rb
+        run: PYTHONPATH=Homebrew-formula-generator python -m poet -f byrdocs-cli > byrdocs-cli.rb
 
       - name: Setup GIT user
         uses: fregante/setup-git-user@v1
