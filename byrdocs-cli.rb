@@ -5,8 +5,8 @@ class ByrdocsCli < Formula
   homepage "https://github.com/byrdocs/byrdocs-cli"
   license "MIT"
 
-  url "https://files.pythonhosted.org/packages/ea/4e/1a419d1b8c34018e95e0d204c219a5aa290f08c32750b5e0dae7dc83efaa/byrdocs_cli-0.5.4.tar.gz"
-  sha256 "a0b9c8f5f88603aef1a25e89c0f390593b68a0cb001453fc038710e25d6e8e95"
+  url "https://files.pythonhosted.org/packages/ca/3d/b75a97066d4690cb08009fa7c135342b965b80e96aa46332fa6a3f2dabf1/byrdocs_cli-0.5.5.tar.gz"
+  sha256 "6a870124e1f8cddb4e66450436993a9adf221de39e967467de0242b80591fd28"
 
   depends_on "python@3.10"
 
@@ -31,8 +31,8 @@ class ByrdocsCli < Formula
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/f2/4f/e1808dc01273379acc506d18f1504eb2d299bd4131743b9fc54d7be4df1e/charset_normalizer-3.4.0.tar.gz"
-    sha256 "223217c3d4f82c3ac5e29032b3f1c2eb0fb591b72161f86d93f5719079dae93e"
+    url "https://files.pythonhosted.org/packages/16/b0/572805e227f01586461c80e0fd25d65a2115599cc9dad142fee4b747c357/charset_normalizer-3.4.1.tar.gz"
+    sha256 "44251f18cd68a75b56585dd00dae26183e102cd5e0f9f1466e6df5da2ed64ea3"
   end
 
   resource "idna" do
